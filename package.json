@@ -9,23 +9,22 @@
     "date-fns": "^1.30.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.0",
-    "@babel/preset-env": "^7.2.0",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.6.0",
     "jest": "^23.6.0",
-    "rollup": "^0.46.0",
-    "rollup-plugin-babel": "^4.0.3",
-    "rollup-plugin-commonjs": "^8.0.2",
-    "rollup-plugin-node-resolve": "^3.0.0"
+    "lerna": "^3.6.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^2.6.2"
   },
   "scripts": {
-    "prebuild": "npm run test",
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "clear-all": "rimraf package-lock.json packages/*/node_modules packages/*/package-lock.json",
+    "bootstrap": "npm-run-all clear-all bootstrap:lerna",
+    "build": "lerna run build",
+    "publish": "lerna publish",
     "test": "jest"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
-    "dist"
+    "lib"
   ]
 }
