@@ -26,7 +26,6 @@ export default [
 	// the `targets` option which can specify `dest` and `format`)
 	{
 		entry: 'src/main.js',
-		external: ['ms'],
 		targets: [
 			{ dest: pkg.main, format: 'cjs' },
 			{ dest: pkg.module, format: 'es' }

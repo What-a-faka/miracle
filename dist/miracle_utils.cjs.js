@@ -2,6 +2,10 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var _format = _interopDefault(require('date-fns/format'));
+
 function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
 }
@@ -288,6 +292,48 @@ var mosaicFormat = Object.freeze({
 	mosaicName: mosaicName
 });
 
+function removeHtml(rawString) {
+  return String(rawString).replace(/<[^>].*?>/g, '');
+}
+
+var htmlFormat = Object.freeze({
+	removeHtml: removeHtml
+});
+
+function format(time) {
+  var pattern = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'YYYY-MM-DD HH:mm:ss';
+  return time ? _format(time, pattern) : '';
+}
+function rangeFormat(dateRange) {
+  var pattern = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'YYYY-MM-DD HH:mm:ss';
+
+  if (Array.isArray(dateRange)) {
+    var dr = dateRange.map(function (date) {
+      return format(date, pattern);
+    }); // startTime and endTime must exist togegher.
+
+    if (dr[0] && dr[1]) {
+      return dr;
+    }
+
+    return [];
+  }
+
+  return dateRange || [];
+}
+function todayRangeFormat() {
+  var date = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Date.now();
+  var start = format(new Date(date).setHours(0, 0, 0));
+  var end = format(new Date(date).setHours(23, 59, 59));
+  return [start, end];
+}
+
+var dateFormat = Object.freeze({
+	format: format,
+	rangeFormat: rangeFormat,
+	todayRangeFormat: todayRangeFormat
+});
+
 /**
  *  由身份证得到生肖
  * @param {*} idCard 
@@ -304,3 +350,5 @@ function zodiacFormat(idCard) {
 
 exports.mosaicFormat = mosaicFormat;
 exports.zodiacFormat = zodiacFormat;
+exports.htmlFormat = htmlFormat;
+exports.dateFormat = dateFormat;
