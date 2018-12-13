@@ -1,24 +1,26 @@
-import _format from 'date-fns/format'
+import _format from 'date-fns/format';
 
-export function format(time, pattern = 'YYYY-MM-DD HH:mm:ss') {
-  return time ? _format(time, pattern) : ''
+const patternStr = 'YYYY-MM-DD HH:mm:ss';
+
+export function format(time, pattern = patternStr) {
+  return time ? _format(time, pattern) : '';
 }
 
-export function rangeFormat(dateRange, pattern = 'YYYY-MM-DD HH:mm:ss') {
+export function rangeFormat(dateRange, pattern = patternStr) {
   if (Array.isArray(dateRange)) {
-    const dr = dateRange.map(date => format(date, pattern))
+    const dr = dateRange.map((date) => format(date, pattern));
 
     // startTime and endTime must exist togegher.
     if (dr[0] && dr[1]) {
-      return dr
+      return dr;
     }
-    return []
+    return [];
   }
-  return dateRange || []
+  return dateRange || [];
 }
 
-export function todayRangeFormat(date = Date.now()) {
-  const start = format(new Date(date).setHours(0, 0, 0))
-  const end = format(new Date(date).setHours(23, 59, 59))
-  return [start, end]
+export function getDayRangeFormat(date = Date.now(), pattern = patternStr) {
+  const start = format(new Date(date).setHours(0, 0, 0), pattern);
+  const end = format(new Date(date).setHours(23, 59, 59), pattern);
+  return [start, end];
 }
