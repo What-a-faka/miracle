@@ -3,18 +3,8 @@
 - `@what-a-faka/utils`，一系列通用工具包
 - `@what-a-faka/vue-authplugin`，Vue权限插件
 
-## 使用方法
-### 安装
-```
-$ npm i @what-a-faka/utils
-```
-
-### 使用
-```
-import { mosaicFormat } from '@what-a-faka/utils'
-
-mosaicFormat.mosaicPhone('13900000000') // 1390****000
-```
+## 文档
+- 在线地址：[https://what-a-faka.github.io/miracle/](https://what-a-faka.github.io/miracle/#/)
 
 ## 计划
 - [ ] 文档引擎
