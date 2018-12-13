@@ -1,5 +1,7 @@
 # miracle
-一些实用工具函数的集合。
+当前工程包含的Magic：
+- `@what-a-faka/utils`，一系列通用工具包
+- `@what-a-faka/vue-authplugin`，Vue权限插件
 
 ## 使用方法
 ### 安装

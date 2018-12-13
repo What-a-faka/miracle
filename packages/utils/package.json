@@ -25,5 +25,8 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "test": "jest"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
