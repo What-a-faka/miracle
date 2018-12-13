@@ -5,11 +5,7 @@
   "module": "dist/miracle_utils.esm.js",
   "browser": "dist/miracle_utils.umd.js",
   "author": "vv13 <zwhvv13@gmail.com>",
-  "dependencies": {
-    "date-fns": "^1.30.1"
-  },
   "devDependencies": {
-    "jest": "^23.6.0",
     "lerna": "^3.6.0",
     "npm-run-all": "^4.1.5",
     "rimraf": "^2.6.2"
@@ -17,14 +13,20 @@
   "scripts": {
     "clear-all": "rimraf package-lock.json packages/*/node_modules packages/*/package-lock.json",
     "bootstrap": "npm-run-all clear-all bootstrap:lerna",
+    "bootstrap:lerna": "lerna bootstrap",
     "build": "lerna run build",
     "publish": "lerna publish",
-    "test": "jest"
+    "test": "lerna run test"
   },
   "publishConfig": {
     "access": "public"
   },
   "files": [
     "lib"
-  ]
+  ],
+  "jest": {
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/(?!utils|vue-authplugin)"
+    ]
+  }
 }
