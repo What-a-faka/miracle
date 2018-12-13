@@ -1,12 +1,13 @@
 {
-  "name": "@what-a-faka/utils",
-  "version": "0.1.6",
-  "main": "dist/miracle_utils.cjs.js",
-  "module": "dist/miracle_utils.esm.js",
-  "browser": "dist/miracle_utils.umd.js",
+  "name": "@what-a-faka/storage",
+  "version": "0.1.0",
+  "main": "dist/storage.cjs.js",
+  "module": "dist/storage.esm.js",
+  "browser": "dist/storage.umd.js",
   "author": "vv13 <zwhvv13@gmail.com>",
   "dependencies": {
-    "date-fns": "^1.30.1"
+    "date-fns": "^1.30.1",
+    "lodash.get": "^4.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",

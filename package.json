@@ -1,9 +1,5 @@
 {
-  "name": "@what-a-faka/utils",
-  "version": "0.1.1",
-  "main": "dist/miracle_utils.cjs.js",
-  "module": "dist/miracle_utils.esm.js",
-  "browser": "dist/miracle_utils.umd.js",
+  "name": "miracle",
   "author": "vv13 <zwhvv13@gmail.com>",
   "devDependencies": {
     "docsify-cli": "^4.3.0",
@@ -13,9 +9,8 @@
   },
   "scripts": {
     "clear-all": "rimraf package-lock.json packages/*/node_modules packages/*/package-lock.json",
-    "bootstrap": "npm-run-all clear-all bootstrap:lerna",
-    "bootstrap:lerna": "lerna bootstrap",
-    "build": "lerna run build",
+    "init": "npm i && npm-run-all clear-all bootstrap",
+    "bootstrap": "lerna bootstrap",
     "publish": "lerna publish",
     "test": "lerna run test",
     "doc:preview": "docsify serve docs"

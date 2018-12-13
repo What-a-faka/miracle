@@ -14,3 +14,19 @@
 - [ ] TypeScript重构
 - [ ] 编写英文文档
 
+## 脚本说明
+### npm run init
+初始化项目，安装依赖，使用lerna进行引导项目。
+
+### npm run bootstrap
+使用lerna进行项目引导与安装。
+
+### npm run test
+执行每个packages下的test脚本。
+
+### npm run publish
+发布packages。
+
+### npm run doc:preview
+本地浏览文档。
+
