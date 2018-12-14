@@ -1,19 +1,15 @@
-# vue-authplugin
-[![npm](https://img.shields.io/badge/npm-0.2.3-blue.svg)](https://www.npmjs.com/package/vue-authplugin)
-[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/vv13/vue-authplugin/blob/master/LICENSE)
+# @what-a-faka/vue-authplugin
+用于视图权限显示控制的一款轻量级Vue Plugin，支持指令、原型链等方法。
 
-
-an elegant view auth control plugin, support directive and prototype methods.
-
-## Installation
+## 安装
 ```
-$ npm install vue-authplugin
+$ npm install @what-a-faka/vue-authplugin
 ```
 
-## Demo
+## 示例
 
 ```
-import authPlugin from 'vue-authplugin'
+import authPlugin from '@what-a-faka/vue-authplugin'
 
 Vue.use(authPlugin, {
     authCode: [101, 102, 103, 104, 105],
@@ -23,7 +19,8 @@ Vue.use(authPlugin, {
     ])
 })
 ```
-after init, we can use directives or methods in template:
+
+在初始化完成后，即可使用指令或原型链的形式调用验证方法：
 ```
 <template>
   <!-- show Login btn if 101 is exists -->
@@ -39,37 +36,37 @@ after init, we can use directives or methods in template:
   <button v-if"$_auth.verify({105: true, 106: false})">Fetch</button>
 </template>
 ```
-### verify(code)
-The verify parameter is very flexible. It can be used in the following ways:
-- Pass in String and check if the authCode contains this code.
-- Pass Array to check if the authCode contains any of the code in the array
-- Pass in Object, check whether all key values pass the check, key is the auth name, and value is whether this permission is needed
-- Pass the key of authMap, the actual check  detection object is the mapped value
+
+### 使用规则
+验证权限参数十分灵活，具体有以下形式可使用：
+- 传入String，检测权限表是否包含此权限
+- 传入Array，检测权限表是否包含数组中的任意一个权限
+- 传入Object，检测所有键值是否都通过校验，key为权限名称，value为是否需要此权限
+- 传入映射名称，即authMap的Key，则实际检测对象为映射值
 
 
-## Usage
-If you use `this.$_auth.verify` to verify the success or failure, it will return true or false; using the directives `v-auth`, if the verify is successful, the `data-auth="success"` attribute will be added to the dom method. If the verification fails, data will be added. `data-auth="fail"` and set `display: none`.
+## 用法
+使用this.$_auth.verify验证成功或失败，则会返回true或false；使用指令形式，验证成功，则会在dom方法上添加data-auth="success"属性，验证失败，则会添加data-auth="fail"，并设置display: none。
 
-### Init
-For init plugin, below is the options can be configure:
+### 初始化
+在使用Vue.use(authPlugin, options)时，options的各个选项为：
 
 | key      | desc                      | type          | default | required |
 | :------- | ------------------------- | ------------- | ------- | -------- |
-| name     | v-{name} and prototype $_{name} | String        | auth    | false    |
-| authCode | auth table                | Array \| Map  | []      | true     |
-| authMap  | mapping table           | Object \| Map | {}      | false    |
+| name     | 指令名与Vue原型链上的键名 | String        | auth    | false    |
+| authCode | 权限表                    | Array \| Map  | []      | true     |
+| authMap  | 权限验证映射表            | Object \| Map | {}      | false    |
 
-### Methods
+### API
 #### updateAuthCode(authCode)
-- Arguments
+- 参数
   - { Array | Map } authCode
 
-Sometimes authCode would change, so can use it to update authCode. Remember to use it before the beforeCreate lifecycle or beffore
+在初始化插件以后，有时权限表会更改，这是可通过此方法来进行更新。记得在组件初始化之前调用此方法。
 
 #### verify(code)
-- Arguments
-  - {String | Object | Array} auth
-- Return
-  - true or false
+- 参数
+  - {String | Object | Array} code
+- 返回值：true or false
 
-Find the authCode, verify that the required code are satisfied, return true if it is satisfied, otherwise return false.
+查找权限表，验证所需权限是否满足，若满足则返回true，否则返回false。
