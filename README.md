@@ -2,15 +2,17 @@
 当前工程包含的Magic：
 - `@what-a-faka/utils`，一系列通用工具包
 - `@what-a-faka/vue-authplugin`，Vue权限插件
+- `@what-a-faka/storage`，localStorage外挂
+- `@what-a-faka/mutation`，将自己的对象进行劳动改造
 
 ## 文档
 - 在线地址：[https://what-a-faka.github.io/miracle/](https://what-a-faka.github.io/miracle/#/)
 
 ## 计划
-- [ ] 文档引擎
+- [x] 文档引擎
+- [x] 发布npm模块
+- [x] 重构工程为多package工程
 - [ ] 集成业务常用工具包
-- [ ] 发布npm模块
-- [ ] 重构工程为多package工程
 - [ ] TypeScript重构
 - [ ] 编写英文文档
 
