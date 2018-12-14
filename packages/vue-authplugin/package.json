@@ -3,7 +3,7 @@
   "main": "lib/vue-authplugin.js",
   "module": "src/index.js",
   "description": "an elegant view auth control plugin",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "vv13 <zwhvv13@gmail.com>",
   "license": "MIT",
   "keywords": [
