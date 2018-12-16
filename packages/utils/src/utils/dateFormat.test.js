@@ -12,6 +12,6 @@ test('rangeFormat', () => {
   expect(dateFormat.rangeFormat(rangeTime)).toEqual(['1994-06-15 00:00:00', '1994-06-16 00:00:00']);
 });
 
-test('todayRangeFormat', () => {
-  expect(dateFormat.todayRangeFormat(today)).toEqual(['1994-06-16 00:00:00', '1994-06-16 23:59:59']);
+test('getDayRangeFormat', () => {
+  expect(dateFormat.getDayRangeFormat(today)).toEqual(['1994-06-16 00:00:00', '1994-06-16 23:59:59']);
 });

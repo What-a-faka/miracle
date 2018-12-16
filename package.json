@@ -10,7 +10,7 @@
   "scripts": {
     "clear-all": "rimraf package-lock.json packages/*/node_modules packages/*/package-lock.json",
     "init": "npm i && npm-run-all clear-all bootstrap",
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap --no-ci",
     "publish": "lerna publish",
     "test": "lerna run test",
     "doc:preview": "docsify serve docs"
