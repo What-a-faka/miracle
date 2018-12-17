@@ -1,6 +1,7 @@
 - [首页](/)
 - 插件
   - [vue-authplugin](/packages/vue-authplugin)
+  - [vue-ravenplugin](/packages/vue-ravenplugin)
 - 工具集
   - [storage](/packages/storage)
   - [utils](/packages/utils)
