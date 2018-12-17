@@ -1,15 +1,17 @@
-# @what-a-faka/vue-authplugin
+> 原仓库：[https://github.com/vv13/vue-authplugin](https://github.com/vv13/vue-authplugin)
+
+# vue-authplugin
 用于视图权限显示控制的一款轻量级Vue Plugin，支持指令、原型链等方法。
 
 ## 安装
 ```
-$ npm install @what-a-faka/vue-authplugin
+$ npm install vue-authplugin
 ```
 
 ## 示例
 
 ```
-import authPlugin from '@what-a-faka/vue-authplugin'
+import authPlugin from 'vue-authplugin'
 
 Vue.use(authPlugin, {
     authCode: [101, 102, 103, 104, 105],
@@ -19,7 +21,6 @@ Vue.use(authPlugin, {
     ])
 })
 ```
-
 在初始化完成后，即可使用指令或原型链的形式调用验证方法：
 ```
 <template>
@@ -36,7 +37,6 @@ Vue.use(authPlugin, {
   <button v-if"$_auth.verify({105: true, 106: false})">Fetch</button>
 </template>
 ```
-
 ### 使用规则
 验证权限参数十分灵活，具体有以下形式可使用：
 - 传入String，检测权限表是否包含此权限

@@ -3,7 +3,7 @@
   "main": "lib/vue-authplugin.js",
   "module": "src/index.js",
   "description": "an elegant view auth control plugin",
-  "version": "0.1.3",
+  "version": "0.2.3",
   "author": "vv13 <zwhvv13@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -15,9 +15,9 @@
   ],
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "test": "jest",
     "build:umd": "cross-env NODE_ENV=production webpack --progress --hide-modules --config webpack.umd.js",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "test": "jest"
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "browserslist": [
     "> 1%",
@@ -28,6 +28,7 @@
     "type": "git",
     "url": "https://github.com/vv13/vue-authplugin"
   },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-jest": "^23.0.1",
@@ -50,8 +51,5 @@
     "transform": {
       "^.+\\.js$": "babel-jest"
     }
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
