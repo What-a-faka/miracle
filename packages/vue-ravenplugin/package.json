@@ -1,6 +1,6 @@
 {
   "name": "@what-a-faka/ravenplugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/ravenplugin.cjs.js",
   "module": "dist/ravenplugin.esm.js",
   "browser": "dist/ravenplugin.umd.js",

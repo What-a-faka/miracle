@@ -1,6 +1,6 @@
 {
   "name": "@what-a-faka/mutation",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/mutation.cjs.js",
   "module": "dist/mutation.esm.js",
   "browser": "dist/mutation.umd.js",
