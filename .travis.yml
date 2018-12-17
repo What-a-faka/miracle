@@ -1,0 +1,18 @@
+language: node_js
+
+node_js:
+  - "10"
+
+cache: npm
+
+
+stages:
+  - test
+
+jobs:
+  include:
+    - stage: test
+      script:
+        - npm i
+        - npm run bootstrap
+        - npm run test
