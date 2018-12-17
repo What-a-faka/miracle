@@ -13,7 +13,8 @@
     "bootstrap": "lerna bootstrap --no-ci",
     "publish": "lerna publish",
     "test": "lerna run test",
-    "doc:preview": "docsify serve docs"
+    "doc:preview": "docsify serve docs",
+    "doc:build": "node scripts/doc-build.js"
   },
   "publishConfig": {
     "access": "public"
