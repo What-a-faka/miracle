@@ -21,7 +21,7 @@
   "scripts": {
     "prebuild": "npm run test",
     "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "dev": "rollup -c -w"
   },
   "publishConfig": {
     "access": "public"

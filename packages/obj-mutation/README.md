@@ -4,12 +4,12 @@
 ## 初始化
 首先，安装依赖：
 ```
-$ npm install @what-a-faka/mutation
+$ npm install @what-a-faka/obj-mutation
 ```
 
 然后在项目中导入：
 ```
-import Mutation from '@what-a-faka/mutation'
+import Mutation from '@what-a-faka/obj-mutation'
 ```
 
 ## 构造

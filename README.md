@@ -3,7 +3,7 @@
 - `@what-a-faka/utils`，一系列通用工具包
 - `@what-a-faka/vue-authplugin`，Vue权限插件
 - `@what-a-faka/storage`，localStorage外挂
-- `@what-a-faka/mutation`，将自己的对象进行劳动改造
+- `@what-a-faka/obj-mutation`，将自己的对象进行劳动改造
 - `@what-a-faka/vue-ravenplugin`，Sentry监控
 
 ## 文档
