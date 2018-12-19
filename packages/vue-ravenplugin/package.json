@@ -1,6 +1,6 @@
 {
   "name": "@what-a-faka/vue-ravenplugin",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "main": "dist/ravenplugin.cjs.js",
   "module": "dist/ravenplugin.esm.js",
   "browser": "dist/ravenplugin.umd.js",
@@ -21,7 +21,7 @@
   "scripts": {
     "prebuild": "npm run test",
     "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "dev": "rollup -c -w"
   },
   "publishConfig": {
     "access": "public"

@@ -129,3 +129,26 @@ import { zodiacFormat } from '@what-a-faka/utils'
   // 狗
   ```
 
+## regExp
+常用语表达的正则校验。
+
+### 引用
+```
+import { regExp } from '@what-a-faka/utils'
+```
+
+### 常用正则
+- Email: 邮箱
+- Landline: 座机号
+- Creditcode: 企业信用代码
+- IDCard: 身份证号
+- ValidCode: 4位数验证码
+- Phone: 手机
+- Website: 网址
+
+### 工具方法
+#### regExp.genValidator(regType, message)
+生成Element-ui的Form Validator，regType名称见上表，message即报错信息。
+#### regExp.regCheck(reg, value)
+校验正则与值是否匹配。
+

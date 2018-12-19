@@ -1,6 +1,6 @@
 {
   "name": "@what-a-faka/utils",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "main": "dist/miracle_utils.cjs.js",
   "module": "dist/miracle_utils.esm.js",
   "browser": "dist/miracle_utils.umd.js",
