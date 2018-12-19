@@ -22,5 +22,7 @@
 - `npm run doc:build`，将根目录以及packages下各包的README.md文件拷贝到docs相关目录下。
 - `npm run doc:preview`，本地预览文档。
 
+欢迎各位前来补充相关文档。
+
 
 

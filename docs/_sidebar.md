@@ -1,8 +1,11 @@
 - [首页](/)
+- 规范
+  - [系统环境](best-install)
+  - [代码风格](best-practice)
 - 插件
   - [vue-authplugin](/packages/vue-authplugin)
   - [vue-ravenplugin](/packages/vue-ravenplugin)
 - 工具集
   - [storage](/packages/storage)
   - [utils](/packages/utils)
-  - [mutation](/packages/mutation)
+  - [obj-mutation](/packages/obj-mutation)
