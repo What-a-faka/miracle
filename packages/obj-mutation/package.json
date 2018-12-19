@@ -1,6 +1,6 @@
 {
   "name": "@what-a-faka/obj-mutation",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "The Object Mutation",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
