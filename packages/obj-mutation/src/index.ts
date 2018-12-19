@@ -1,3 +1,3 @@
-import ObjMutation from './obj-mutation'
+import ObjMutation from './obj-mutation';
 
-export = ObjMutation
+export = ObjMutation;

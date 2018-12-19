@@ -1,5 +1,5 @@
 // import Mutation = require('./index');
-import Mutation from './obj-mutation'
+import Mutation from './obj-mutation';
 
 test('clean Default ', () => {
   const data = {

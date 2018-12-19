@@ -37,7 +37,7 @@ class ObjMutation {
     const newObj: any = (Object as any).assign({}, originObj);
 
     const originObjKeys = Object.keys(this.schema);
-    originObjKeys.forEach(originObjKey => {
+    originObjKeys.forEach((originObjKey) => {
       const { format, mutate, create } = this.schema[originObjKey];
       const originValue = originObj[originObjKey];
 
@@ -45,7 +45,7 @@ class ObjMutation {
 
       if (mutate) {
         delete newObj[originObjKey];
-        Object.keys(mutate).forEach(mutateKey => {
+        Object.keys(mutate).forEach((mutateKey) => {
           newObj[mutateKey] = mutate[mutateKey](originValue);
         });
         return;
@@ -61,9 +61,9 @@ class ObjMutation {
     });
     return this.pipe(newObj);
   }
-  
+
   private pipe(params: object) {
-    const piplineFuncs = ['clean'].filter(p => this.options[p]);
+    const piplineFuncs = ['clean'].filter((p) => this.options[p]);
 
     const prettyParams = piplineFuncs.reduce((result, nextPip) => {
       if (this.options[nextPip] && this[nextPip]) {
@@ -78,7 +78,7 @@ class ObjMutation {
 
   private clean(params: any) {
     const niceParams: { [key: string]: any } = {};
-    Object.keys(params).forEach(key => {
+    Object.keys(params).forEach((key) => {
       const isTruth = this.options.cleanValue === '_falsy' ? false : true;
       if (isTruth) {
         if (params[key] !== this.options.cleanValue) {
